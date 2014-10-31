@@ -1,45 +1,14 @@
-<!-- NEW APPLICATION FORM -->
-<!-- 
-Bootstrap classes:
-- form-inline to display form elements on one line
-- form-group to group labels and form inputs
-
-
- -->
-<?php include "header.php";?>
+<div class="panel-heading"><strong>New Application</strong></div>
 	
-	<script src="custom_scripts/form-validator/jquery.form-validator.min.js"></script>
-	<script src="custom_scripts/form-validator.js"></script>
-	
-	<!-- HEADER OF PAGE -->
-	<div id="header_subpage1" class="col-xs-12 col-lg-12 col-md-12">
-			<div id="header-label" class="themebg yey col-xs-10 col-md-4 col-lg-4">
-				
-				<h1>New Application </h1>	
-				
-				
-			</div>
-			
-			
-	</div>
-
-	<div id="header" class="col-xs-12 col-lg-12 col-md-12">
-	<div class="col-xs-12 col-lg-2 col-md-2">
-		<!--PLACEHOLDER FOR LAYOUT-->
-	</div>
-	<div  class="col-xs-12 col-lg-8 col-md-8">
-
-	<!--FORM CONTENT: SUBMIT TO newApplication.php-->
-	<form role="form"  enctype="multipart/form-data" class="panel panel-default" name="form-application" id="form-application" method="post" action="newApplication.php">
-
-		
-		<p id="errtxt1" class="text-danger bg-danger hidden">You have not completed the form. Please fill up required fields.</p>
-	
+	<fieldset class="well">
+		<strong>TYPE OF APPLICATION:<br></strong>
+		<p><input type="radio"  name="apptype" value="new">New</p>
+		<p><input type="radio" name="apptype" value="replacement">Replacement of lost/old/unidentified or non-LB issued/correction of entry on the old ID<br></p>
+	</fieldset>
 	<h3>&nbsp; Personal Information</h3>
 	
-	<!-- Input name -->
 	<label>&nbsp;&nbsp; Name:</label>
-
+	<p id="errtxt1" class="text-danger bg-danger hidden">This field is required.</p>
 	<div class="form-inline name">
 	
 		<div class="input-group">
@@ -60,43 +29,31 @@ Bootstrap classes:
 	
 	</div>
 
-	<!-- Input address -->
 	<label>&nbsp;&nbsp; Address:</label>
-
+	<p id="errtxt2" class="text-danger bg-danger hidden">This field is required.</p>
 	<div  class="form-inline name">
 		
 		<div class="input-group">
 			<!--<span class="input-group-addon"><strong>Surname</strong></span>-->
 			<input class="form-control" type="text" name="streetname" data-validation="required" 
-		 data-validation-length="1" data-validation-error-msg="This field is required. " placeholder="House Name, Street Name" >
+		 data-validation-length="1" data-validation-error-msg="This field is required. " placeholder="Street Name" >
 		</div>
 		<div class="input-group">
 			<!--<span class="input-group-addon"><strong>Given Name</strong></span>-->
-			<select data-validation="required" 
-		 data-validation-length="1" data-validation-error-msg="This field is required. " name="barangay" class="form-control" required="">
-				<option value="Anos">Anos</option>
-				<option value="Bagong Silang">Bagong Silang</option>
-				<option value="Bambang">Bambang</option>
-				<option value="Batong Malake">Batong Malake</option>
-				<option value="Bayog">Bayog</option>
-				<option value="Baybayin">Baybayin</option>
-				<option value="Lalakay">Lalakay</option>
-				<option value="Maahas">Maahas</option>
-				<option value="Malinta">Malinta</option>
-				<option value="Mayondon">Mayondon</option>
-				<option value="Putho-Tuntungin">Putho-Tuntungin</option>
-				<option value="San Antonio">San Antonio</option>
-				<option value="Tadlac">Tadlac</option>
-				<option value="Timugan">Timugan</option>
-				</select>
+			 <input class="form-control" type="text" name="barangay" data-validation="required" 
+		 data-validation-length="1" data-validation-error-msg="This field is required. "  placeholder="Barangay" >
 		</div>
-	
+		<div class="input-group">
+			<!--<span class="input-group-addon"><strong>Middle Name</strong></span>-->
+			 <input class="form-control" type="text" name="city"  data-validation="required" 
+		 data-validation-length="1" data-validation-error-msg="This field is required. " placeholder="City" >
+		</div>
 	
 	</div>
 
 	</hr>
 
-	<!-- Input telephone and years of residency -->
+	<p id="errtxt3" class="text-danger bg-danger hidden">This field is required.</p>
 	<div class="form-inline">
 		
 		<div class="input-default input-group col-lg-5 col-xs-12 col-md-5">
@@ -113,7 +70,6 @@ Bootstrap classes:
 	
 	</div>
 
-	<!-- Input birthday and birthplace -->
 	<div class="form-inline">
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Date of Birth</strong></span>
@@ -130,7 +86,6 @@ Bootstrap classes:
 	
 	</div>
 	
-	<!-- Input gender and civil status -->
 	<div class="form-inline">
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Gender</strong></span>
@@ -155,7 +110,6 @@ Bootstrap classes:
 	</div>
 	
 	<hr/>
-	<!-- Input spouse information -->
 	<h3>&nbsp; Spouse Information</h3>
 
 	<div class="form-inline">
@@ -177,7 +131,7 @@ Bootstrap classes:
 	
 	<hr/>
 	<h3>&nbsp; Education and Employment</h3>
-	<!-- Input educational attainment and employed toggles -->
+
 	<div class="form-inline">
 		
 		
@@ -197,8 +151,8 @@ Bootstrap classes:
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Are you presently employed?</strong></span>
 			 <input type="radio" data-validation="required" 
-		 data-validation-length="1" data-validation-error-msg="This field is required. " name="employed" value="Yes">Yes
-		<input type="radio" name="employed" value="No">No<br>
+		 data-validation-length="1" data-validation-error-msg="This field is required. " name="employed" value="1">Yes
+		<input type="radio" name="employed" value="0">No<br>
 		</div>
 		
 	
@@ -211,7 +165,7 @@ Bootstrap classes:
 
 	<div class="form-inline">
 		
-		<!-- Input work position and salary -->
+		
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Position</strong></span>
 			  <input class="form-control" type="text" name="position" >
@@ -227,7 +181,7 @@ Bootstrap classes:
 	
 	<div class="form-inline">
 		
-		<!-- Input employer and address -->
+		
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Employer</strong></span>
 			  <input class="form-control" type="text" name="employer" >
@@ -235,14 +189,14 @@ Bootstrap classes:
 			
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Address</strong></span>
-			  <input class="form-control" type="text" name="workaddress">
+			  <input class="form-control" type="number" name="workaddress">
 		</div>
 		
 	
 	</div>
 
 	<div class="form-inline">
-		<!-- Input telephone number of employer and other sources of income -->
+		
 			
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Telephone Number</strong></span>
@@ -258,7 +212,7 @@ Bootstrap classes:
 
 	<div class="form-inline">
 		
-		<!-- Ask for amout of income -->
+			
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Amount </strong></span>
 			  <input class="form-control" type="number" name="incomesrcamt" >
@@ -273,25 +227,25 @@ Bootstrap classes:
 
 	<div class="form-inline">
 		
-		<!-- Ask about philhealth membership and dependency -->
+			
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Are you a member of PhilHealth? </strong></span>
 			  	<input type="radio" data-validation="required" 
-		 data-validation-length="1" data-validation-error-msg="This field is required. " name="phmember" value="Yes">Yes</input>
-				<input type="radio" name="phmember" value="No">No</input><br>
+		 data-validation-length="1" data-validation-error-msg="This field is required. " name="phmember" value="1">Yes</input>
+				<input type="radio" name="phmember" value="0">No</input><br>
 		</div>
 
 		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
 			<span class="input-group-addon"><strong>Are you a dependent of a Philhealth member? </strong></span>
 			  	<input type="radio" data-validation="required" 
-		 data-validation-length="1" data-validation-error-msg="This field is required. " name="phdependent" value="Yes">Yes</input>
-				<input type="radio" name="phdependent" value="No">No </input><br>
+		 data-validation-length="1" data-validation-error-msg="This field is required. " name="phdependent" value="1">Yes</input>
+				<input type="radio" name="phdependent" value="0">No </input><br>
 		</div>
 		
 	
 	</div>
 
-	<!-- Ask for Philhealth numbers -->
+	
 	<div class="form-inline">
 		
 			
@@ -308,62 +262,32 @@ Bootstrap classes:
 	</div>
 
 	<hr/>
-
-	<hr/>
-
-	<!-- Input 3 members of the family -->
-	<h3>&nbsp; Members of the Family</h3>
-
-			<div class="form-inline">
-		<div class="input-default input-group col-lg-5 col-xs-12 col-md-5">
-			<span class="input-group-addon"><strong>Family Member</strong></span>
-			  <input class="form-control" type="text"   placeholder="Name" name="fmem1name">
-		</div>
-		
-		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
-			
-			  <input class="form-control" type="text" placeholder="Occupation" name="fmem1occupation">
-		</div>
-		
 	
-		</div>
-
-		<div class="form-inline">
-		<div class="input-default input-group col-lg-5 col-xs-12 col-md-5">
-			<span class="input-group-addon"><strong>Family Member</strong></span>
-			  <input class="form-control" type="text"  placeholder="Name" name="fmem2name">
-		</div>
-		
-		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
-			
-			  <input class="form-control" type="text"  placeholder="Occupation" name="fmem2occupation">
-		</div>
-		
-	
-		</div>
-
-		<div class="form-inline">
-		<div class="input-default input-group col-lg-5 col-xs-12 col-md-5">
-			<span class="input-group-addon"><strong>Family Member</strong></span>
-			  <input class="form-control" type="text"   placeholder="Name" name="fmem3name">
-		</div>
-		
-		<div class="input-default  input-group col-lg-5 col-xs-12 col-md-5">
-			
-			  <input class="form-control" type="text"  placeholder="Occupation" name="fmem3occupation">
-		</div>
-		
-		<button id="button" class="btn btn-info btn-md center"  type="button">Next>></button>
-		</div>
 	</div>
 	<div class="col-xs-12 col-lg-4 col-md-4">
 	</div>
 
 	<div class="col-xs-12 col-lg-12 col-md-12 ">
-	<div>
-
+	<div class="panel panel-default">
+<!-- MEMBERS OF THE FAMILY -->
+	<!-- Multiple values dito. Di ko alam kung paano iimplement sa mysql. -->
 	
+	<br>I hereby certify that all the information above are true and correct to the best of my knowledge and ability. <br><br>
+	
+	
+	<!-- Signature or thumb mark here; align right -->
+	Signature or Thumb mark of Senior Citizen<br><br>
+	
+	
+<!--data-toggle="modal" data-target="#myModal"-->
+	<button id="submit" class="btn btn-info" type="button">Submit</button>
 
+
+	<!--data-toggle="modal" data-target="#myModal" -->
+	
+	<!-- Naisip ko lang, pwedeng after clicking submit, dun nalang ilagay sa next page yung para sa OSCA ID chuchu para di na magtatanong yung gagamit para saan yun. Atsaka para naman lang kasi yun sa personnel -->
+
+	<!-- Popup before submitting to form -->
 
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
@@ -377,20 +301,11 @@ Bootstrap classes:
 				<h1 align=center><?php include "private-files/generateid.php"?><h1>
 
 				<input type="hidden" name="idno" value="<?php echo $SC_IDNO?>">
-				<h3>Please check whether you have properly filled up the form. If you have forgotten to fill up required fields, the form will not be submitted.</h3>
-				<button id="button" class="btn btn-success btn-lg" type="submit">Submit</button>
 				
+				<button id="button" class="btn btn-info" type="submit">Submit</button>
+				<div id="results">
+				</div>
 			</div>
 		    </div>
 		  </div>
 		</div>
-
-	</form>
-	
-
-	
-	</div>	
-	</div>	
-	</div>
-</body>
-</html>
