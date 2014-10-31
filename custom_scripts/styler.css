@@ -1,12 +1,22 @@
 //NAVBAR CSS
 nav {
 	width: 100%;
+
 }
 
 
 #menu-toggle{
 	background-color: rgb(241,46,61);
 	width: 75px;
+	height: 50px;
+	float: left;
+	margin-left: -15px;
+	color:white;
+	border-style:none;
+}
+#menu-toggle-lg{
+	background-color: rgb(241,46,61);
+	width: 400px;
 	height: 50px;
 	float: left;
 	margin-left: -15px;
@@ -31,17 +41,32 @@ nav {
 }
 
 .yey {
-	margin: 6px;
-	width: 24%;
+	color: white;
+	margin-left: 6%;
+	margin-top: 10px;
+
+}
+.img-full{
+	height: 200px;
 }
 
+
 .img-full img {
-	width: 100%;
+	width: 50%;
+	
+	margin: 10px;
+	margin-left: 30%;
+
 }
 
 #header_subpage1 {
 	height: 100px;
-	background-color:#2591f5
+
+}
+
+#log-panel{
+	height:215px;
+	overflow-y: hidden;
 }
 
 
@@ -83,3 +108,76 @@ nav {
 .whitetext {
 	color: white;
 }
+#login {
+	background: url(img/losbanoshall.jpg)no-repeat fixed ;
+	background-size: 100%;
+
+}
+
+#login-form {
+	background: white;
+	margin-top: 25%;
+	margin-left: -15px;
+	padding: 10px;
+
+}
+
+#login-form .input-group {
+	
+	padding: 10px;
+
+}
+
+.alert{
+	font-size: 15pt;
+}
+
+#button {
+	margin: 10px;
+	margin-left: 43%;
+
+}
+
+.menu-template {	
+	margin-top: -20px;
+	box-shadow: 3px 10px 20px 6px #ccc;
+
+}
+
+#menubtn, #searchbtn {
+	margin: 5px;
+}
+
+#logo-container {
+	margin-left: 35%;
+}
+//NAVBAR MENU CSS
+//FOR SEARCH
+#search-navigate {
+	float: right;
+	height: 400px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+#search-navigate button{
+	width: 48%;
+}
+//FOR MENU
+#menu-navigate {
+	position: absolute;
+	z-index: 999;
+}
+
+#menu-navigate h4:hover {
+	background-color: white;
+	color: rgb(241,46,61);
+	text-decoration: none;
+}
+
+#results {
+	height: 300px;
+	width: ;
+	overflow-y: scroll;
+}
+
+
